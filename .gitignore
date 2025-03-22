@@ -6,3 +6,4 @@ staticfiles
 mediafiles
 .env
 .idea
+.secrets

@@ -24,7 +24,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 
 DEBUG = int(os.environ.get('DEBUG', default=0))
 
-ALLOWED_HOSTS = ['localhost', '127.0.0.1', "146.190.142.165" ]
+ALLOWED_HOSTS = os.getenv("ALLOWED_HOSTS", "").split(",") or ['localhost', '127.0.0.1' ]
 
 # Application definition
 

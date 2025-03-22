@@ -5,12 +5,13 @@ from django.conf.urls.static import static
 from django.http import JsonResponse
 
 
-def home(request):
-    return JsonResponse({"hello": "world"})
+def home(request, name="world"):
+    return JsonResponse({"hello": name})
 
 
 urlpatterns = [
     path('', home, name='home'),
+    path('/<name>/', home, name='name'),
     path('admin/', admin.site.urls),
 ]
 
